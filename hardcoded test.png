@@ -1,9 +1,16 @@
-import os
+#include <stdio.h>
+#include <string.h>
 
-filename = input("Enter a filename: ")
+void safe_function() {
+    char buffer[10];
 
-if os.path.isfile(filename):
-    with open(filename, "r", encoding="utf-8", errors="ignore") as f:
-        print(f.read())
-else:
-    print("Invalid file")
+    printf("Enter your name: ");
+    fgets(buffer, sizeof(buffer), stdin);
+
+    printf("Hello %s\n", buffer);
+}
+
+int main() {
+    safe_function();
+    return 0;
+}
